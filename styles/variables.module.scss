@@ -1,0 +1,13 @@
+$primary-color:"red";
+$primary-color:"red";
+
+/* Links */
+
+$link-color: #0099ff;
+$link-active-color: lighten($link-color, 40%);
+
+
+
+:export {
+    primaryColor: $primary-color;
+}
