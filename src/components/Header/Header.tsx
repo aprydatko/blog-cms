@@ -4,8 +4,8 @@ import { UserProfile, Menu } from '../Menu/header';
 
 export const Header = (): JSX.Element => {
   return (
-    <Container maxW="100wv" p={0}>
-      <Flex justifyContent="space-between" h="30px" backgroundColor="black">
+    <Container pos="fixed" maxW="100wv" p={0} zIndex="toast">
+      <Flex justifyContent="space-between" h="35px" bg="#222" px={0}>
         <Menu logo blogLink addPost />
         <UserProfile />
       </Flex>

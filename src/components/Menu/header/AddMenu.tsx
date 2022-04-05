@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Flex, HStack, Text } from '@chakra-ui/react';
+import NextLink from 'next/link';
+import { Flex, HStack, Link } from '@chakra-ui/react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaHome, FaPlus, FaReact } from 'react-icons/fa';
 
@@ -12,8 +13,8 @@ interface AddMenuProps {
 }
 
 const variants = {
-  open: { opacity: 1, zIndex: 9999, y: 0 },
-  close: { opacity: 0, zIndex: -1, y: '-100%' },
+  open: { opacity: 1, y: 0 },
+  close: { opacity: 0, y: '-100%' },
 };
 
 export const AddMenu = ({
@@ -50,20 +51,27 @@ export const AddMenu = ({
         pl={2}
         pr={2}
         spacing={2}
-        bg={isActive ? 'gray.800' : 'black'}
+        bg={isActive ? '#3c434a' : '#222'}
         onMouseEnter={changeOnMouseEnter}
         onMouseLeave={changeOnMouseLeave}
       >
         {getIcon(name)}{' '}
         {title && (
-          <Text fontSize="xs" color={isActive ? '#63B3ED' : 'white'}>
-            {title}
-          </Text>
+          <NextLink href="/" passHref>
+            <Link
+              variant="header-menu"
+              fontSize="xs"
+              color={isActive ? '#63B3ED' : 'white'}
+            >
+              {title}
+            </Link>
+          </NextLink>
         )}
       </HStack>
       <AnimatePresence>
         {isActive && (
           <MotionStack
+            w="160px"
             pos="absolute"
             top="26px"
             left="0"
@@ -75,7 +83,8 @@ export const AddMenu = ({
             flexDirection="column"
             alignItems="flex-start"
             justifyContent="flex-start"
-            bg="gray.800"
+            zIndex="hide"
+            bg="#3c434a"
             onMouseEnter={changeOnMouseEnter}
             onMouseLeave={changeOnMouseLeave}
             variants={variants}

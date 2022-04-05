@@ -24,7 +24,7 @@ export const UserProfile = () => {
         pl={2}
         pr={2}
         spacing={2}
-        bg={isActive ? 'gray.800' : 'black'}
+        bg={isActive ? '#3c434a' : '#222'}
         onMouseEnter={changeOnMouseEnter}
         onMouseLeave={changeOnMouseLeave}
       >
@@ -37,13 +37,13 @@ export const UserProfile = () => {
         {isActive && (
           <MotionStack
             pos="absolute"
-            top="26px"
+            top="35px"
             right="0"
             pl={2}
             pr={2}
             py={2}
             fontSize="xs"
-            bg="gray.800"
+            bg="#3c434a"
             onMouseEnter={changeOnMouseEnter}
             onMouseLeave={changeOnMouseLeave}
             variants={variants}
