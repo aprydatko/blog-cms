@@ -19,9 +19,9 @@ export const Navigation = () => {
       justifyContent="flex-start"
       alignItems="flex-start"
       zIndex="sticky"
-      bg="#222"
+      bg="background.dark"
     >
-      <VStack w="full" mt="30px" py={4} zIndex="base">
+      <VStack w={isFullWith ? '160px' : '40px'} mt="30px" py={4} zIndex="base">
         {navigation.map(({ id, name, title, url, tag, submenu }, index) => (
           <>
             <AddMenu
@@ -32,7 +32,7 @@ export const Navigation = () => {
               url={url}
             >
               {submenu.map((item) => (
-                <NextLink key={item.id} href={item.url}>
+                <NextLink key={item.id} href={item.url} passHref>
                   <Link variant="navigation-submenu">{item.title}</Link>
                 </NextLink>
               ))}

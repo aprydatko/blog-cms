@@ -4,7 +4,7 @@ import Layout from 'src/layouts/main';
 const Home: NextPage = () => {
   return (
     <Layout title="CMS" description="Система контроля контентом">
-      <div>home page</div>
+      <div>tags page</div>
     </Layout>
   );
 };

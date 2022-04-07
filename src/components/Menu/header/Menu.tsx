@@ -15,13 +15,10 @@ export const Menu = ({ logo, blogLink, addPost }: MenuProps): JSX.Element => {
           <Link href="/" variant="header-menu">
             cms.com
           </Link>
-          <Link href="/" variant="header-menu">
+          <Link href="/documentation" variant="header-menu">
             Документація
           </Link>
-          <Link href="/" variant="header-menu">
-            Підтримка
-          </Link>
-          <Link href="/" variant="header-menu">
+          <Link href="/feedback" variant="header-menu">
             Зворотній зв'язок
           </Link>
         </AddMenu>

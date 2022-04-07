@@ -1,60 +1,71 @@
-import { extendTheme, theme as base } from '@chakra-ui/react';
+import {
+  extendTheme,
+  theme as base,
+  withDefaultColorScheme,
+  withDefaultVariant,
+} from '@chakra-ui/react';
 
-const theme = extendTheme({
-  fonts: {
-    heading: `Montserrat, ${base.fonts?.heading}`,
-    body: `Inter ${base.fonts?.body}`,
-  },
-  components: {
-    Link: {
-      variants: {
-        'header-menu': {
-          fontSize: '13px',
-          fontWeight: 400,
-          lineHeight: 2,
-          color: 'white',
+import {
+  inputSelectStyles,
+  brandRing,
+  linkStyles,
+  buttonStyles,
+} from './components';
 
-          _hover: {
-            color: 'blue.300',
-            textDecorationLine: 'none',
-          },
-        },
-        'navigation-menu': {
-          fontSize: 'sm',
-          fontWeight: 400,
-          lineHeight: 1,
-          color: 'white',
+const theme = extendTheme(
+  {
+    colors: {
+      brand: {
+        50: '#fff',
+        100: '#f0f0f1',
+        200: '#3c434a',
+        300: '#63B3ED',
+        400: '#3182CE',
+        500: '#2B6CB0',
+        600: '#FC8181',
+        700: '#E53E3E',
+        800: 'rgba(255, 255, 255, 0.06)',
+        900: '#222',
+      },
+      background: {
+        light: '#fff',
+        subMenu: '#3c434a',
+        dark: '#222',
+      },
+      input: {
+        border: 'blue.300',
+        secondary: 'blue.500',
+      },
+    },
+    fonts: {
+      heading: `Montserrat, ${base.fonts?.heading}`,
+      body: `Inter ${base.fonts?.body}`,
+    },
+    components: {
+      Link: { ...linkStyles },
+      Button: { ...buttonStyles },
+      Input: { ...inputSelectStyles },
+      Checkbox: {
+        baseStyle: {
+          control: {
+            borderRadius: 'none',
 
-          _hover: {
-            color: 'blue.300',
-            textDecorationLine: 'none',
-          },
-        },
-        'navigation-submenu': {
-          position: 'relative',
-          fontSize: 'sm',
-          fontWeight: 400,
-          lineHeight: 2,
-          color: 'white',
-
-          _hover: {
-            color: 'blue.300',
-            textDecorationLine: 'none',
-
-            _before: {
-              content: `""`,
-              position: 'absolute',
-              top: '0px',
-              left: '-10px',
-              width: '3px',
-              height: '28px',
-              background: 'blue.300',
+            _focus: {
+              ring: 0,
             },
           },
         },
       },
     },
   },
-});
+  withDefaultColorScheme({
+    colorScheme: 'brand',
+    components: ['Checkbox'],
+  }),
+  withDefaultVariant({
+    variant: 'filled',
+    components: ['Input', 'Select'],
+  })
+);
 
 export default theme;

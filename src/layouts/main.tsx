@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { VStack, HStack, Container, Box, Link, Flex } from '@chakra-ui/react';
+import { Container, Flex } from '@chakra-ui/react';
 import { Header, Navigation } from '../components';
 
 interface MainProps {
@@ -19,7 +19,9 @@ const Main = ({ children, title, description }: MainProps): JSX.Element => {
       <Header />
       <Flex w="full" h="100vh">
         <Navigation />
-        <div>main</div>
+        <Container maxW="container.2xl" mt="35px" py={4}>
+          {children}
+        </Container>
       </Flex>
     </Container>
   );
