@@ -5,7 +5,7 @@ import { UserProfile, Menu } from '../Menu/header';
 export const Header = (): JSX.Element => {
   return (
     <Container pos="fixed" maxW="100wv" p={0} zIndex="toast">
-      <Flex justifyContent="space-between" h="35px" bg="background.dark" px={0}>
+      <Flex justifyContent="space-between" h="35px" bg="#1d2327" px={0}>
         <Menu logo blogLink addPost />
         <UserProfile />
       </Flex>

@@ -51,7 +51,7 @@ export const AddMenu = ({
         pl={2}
         pr={2}
         spacing={2}
-        bg={isActive ? 'background.subMenu' : 'background.dark'}
+        bg={isActive ? '#2c3338' : '#1d2327'}
         onMouseEnter={changeOnMouseEnter}
         onMouseLeave={changeOnMouseLeave}
       >
@@ -84,7 +84,7 @@ export const AddMenu = ({
             alignItems="flex-start"
             justifyContent="flex-start"
             zIndex="hide"
-            bg="background.subMenu"
+            bg="#2c3338"
             onMouseEnter={changeOnMouseEnter}
             onMouseLeave={changeOnMouseLeave}
             variants={variants}

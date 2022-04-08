@@ -24,7 +24,7 @@ export const UserProfile = () => {
         pl={2}
         pr={2}
         spacing={2}
-        bg={isActive ? 'background.subMenu' : 'background.dark'}
+        bg={isActive ? '#2c3338' : '#1d2327'}
         onMouseEnter={changeOnMouseEnter}
         onMouseLeave={changeOnMouseLeave}
       >
@@ -43,7 +43,7 @@ export const UserProfile = () => {
             pr={2}
             py={2}
             fontSize="xs"
-            bg="background.subMenu"
+            bg="#2c3338"
             onMouseEnter={changeOnMouseEnter}
             onMouseLeave={changeOnMouseLeave}
             variants={variants}

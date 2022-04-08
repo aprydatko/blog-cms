@@ -19,7 +19,7 @@ export const Navigation = () => {
       justifyContent="flex-start"
       alignItems="flex-start"
       zIndex="sticky"
-      bg="background.dark"
+      bg="#1d2327"
     >
       <VStack w={isFullWith ? '160px' : '40px'} mt="30px" py={4} zIndex="base">
         {navigation.map(({ id, name, title, url, tag, submenu }, index) => (

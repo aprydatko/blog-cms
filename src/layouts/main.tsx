@@ -19,7 +19,7 @@ const Main = ({ children, title, description }: MainProps): JSX.Element => {
       <Header />
       <Flex w="full" h="100vh">
         <Navigation />
-        <Container maxW="container.2xl" mt="35px" py={4}>
+        <Container maxW="container.2xl" mt="35px" py={4} bg="#f0f0f1">
           {children}
         </Container>
       </Flex>
