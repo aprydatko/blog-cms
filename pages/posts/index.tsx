@@ -1,9 +1,9 @@
 import type { NextPage } from 'next';
 import Layout from 'src/layouts/posts';
 import { HStack, Button, Heading, Box, Flex } from '@chakra-ui/react';
-import { Search, ViewBlog } from 'src/components';
+import { ViewBlog } from 'src/components';
 
-const Home: NextPage = () => {
+const Posts: NextPage = () => {
   return (
     <Layout title="CMS" description="Система контроля контентом">
       <Box>
@@ -23,4 +23,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Posts;
